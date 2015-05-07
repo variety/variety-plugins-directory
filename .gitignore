@@ -1,0 +1,4 @@
+# intellij idea project files
+.idea/
+
+node_modules
