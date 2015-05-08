@@ -4,4 +4,8 @@ block content
   h1= title
   p Welcome to the Variety plugins repository
 
-  =JSON.stringify(plugins)
+  ul
+    each plugin in plugins
+      li
+       a(href='/details/#{plugin.name}') #{plugin.name}
+
