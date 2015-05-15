@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to the Variety plugins repository
-
-  ul
+  #posts
     each plugin in plugins
-      li
-       a(href='/details/#{plugin.name}') #{plugin.name}
-
+      section.post
+        header.post-header
+          h2.post-title #{plugin.name}
+          div.post-description
+            p= plugin.description
+            a.pure-button.pure-button-primary(href='/details/#{plugin.name}') Details

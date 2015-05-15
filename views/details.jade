@@ -1,7 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Details of plugin
+  div.fright
+    a.pure-button-primary.pure-button(href='#{plugin.versions[plugin["dist-tags"].latest].dist.tarball}') Download
+    a.button-secondary.pure-button(href='https://www.npmjs.com/package/#{plugin.name}') npmjs
+  h1 #{plugin.name}
+  p #{plugin.description}
 
-  =JSON.stringify(plugin)
+  each keyword in plugin.keywords
+    span.post-category.post-category-pure #{keyword}
+
+  div!= md(plugin.readme)
