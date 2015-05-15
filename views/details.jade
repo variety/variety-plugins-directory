@@ -1,5 +1,8 @@
 extends layout
 
+block vars
+  - var title= plugin.name
+
 block content
   div.fright
     a.pure-button-primary.pure-button(href='#{plugin.versions[plugin["dist-tags"].latest].dist.tarball}') Download
