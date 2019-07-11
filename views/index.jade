@@ -8,7 +8,7 @@ block content
     each plugin in plugins
       section.post
         header.post-header
-          h2.post-title #{plugin.name}
+          h2.post-title #{plugin.package.name}
           div.post-description
-            p= plugin.description
-            a.pure-button.pure-button-primary(href='/details/#{plugin.name}') Details
+            p= plugin.package.description
+            a.pure-button.pure-button-primary(href='/details/#{plugin.package.name}') Details

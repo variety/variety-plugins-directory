@@ -1,5 +1,5 @@
 var express = require('express');
-var plugins = require('variety-plugins-searcher')
+var plugins = require('variety-plugins-searcher');
 var router = express.Router();
 var marked = require('marked');
 var cache = require('../lib/cache');
